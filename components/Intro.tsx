@@ -47,10 +47,10 @@ const Intro = () => {
             </Typography>
         </TextWrapper>
         <ProfilePic
-            src="/img/grinch.jpeg"
+            src="/img/profile_pic.JPG"
             alt="Profile Image"
             width={200}
-            height={200} />
+            height={220} />
        </Wrapper>
     );
 };
