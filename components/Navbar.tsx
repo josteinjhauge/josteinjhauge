@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
                         href={links.github}
                     >
                         <IconButton color="secondary" aria-label="GitHub Button">
-                        <FaGithub size={ICON_SIZE} />
+                            <FaGithub size={ICON_SIZE} />
                         </IconButton>
                     </Link>
                     <Link
@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
                         href={links.linkedin}
                     >
                         <IconButton color="secondary" aria-label="LinkedIn Button">
-                        <FaLinkedin size={ICON_SIZE} />
+                            <FaLinkedin size={ICON_SIZE} />
                         </IconButton>
                     </Link>
                     <Link
@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
                         href={links.email}
                     >
                         <IconButton color="secondary" aria-label="Email Button">
-                        <MdMailOutline size={ICON_SIZE} />
+                            <MdMailOutline size={ICON_SIZE} />
                         </IconButton>
                     </Link>
             </Box>
