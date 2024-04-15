@@ -1,20 +1,22 @@
 
 import { PaletteOptions, createTheme } from "@mui/material";
-
+// naval Hex: 354649 / 6C7A89 / A3C6C4 / E0E7E9
+// easter Hex: 8E7C68 / ED7458 / FFDC9F / DDC9BC
+// scuba Hex: 0C4A60 / EF6C33 / ABDFF1 / E1DDDB
 const palette: PaletteOptions = {
   primary: {
-    main: "#1c1c1c",
+    main: "#0C4A60",
   },
   secondary: {
-    main: "#fff",
+    main: "#EF6C33",
   },
   text: {
-    primary: "#fff",
-    secondary: "#d3d3d3",
+    primary: "#E1DDDB",
+    secondary: "#ABDFF1",
   },
   background: {
-    default: "#1c1c1c",
-    paper: "#1c1c1c",
+    default: "#0C4A60",
+    paper: "#354649",
   },
 };
 

@@ -112,4 +112,6 @@ export interface Project {
       },
   ];
 
+  export default projects;
+
 
