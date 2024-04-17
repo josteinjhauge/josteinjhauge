@@ -37,15 +37,15 @@ const Navbar: React.FC = () => {
                 {isMobile ? (
             <Box>
               <IconButton
-                color="secondary"
                 onClick={() => setDrawerOpen(true)}
                 aria-label="Side Drawer Open Button"
               >
-                <TfiMenu size={ICON_SIZE} />
+                <TfiMenu size={ICON_SIZE} color={theme.palette.text.primary} />
               </IconButton>
 
               <SwipeableDrawer
                 anchor="right"
+                color='primary'
                 open={drawerOpen}
                 onOpen={() => setDrawerOpen(true)}
                 onClose={() => setDrawerOpen(false)}
@@ -63,10 +63,9 @@ const Navbar: React.FC = () => {
                   >
                     <IconButton
                       style={{ marginTop: 15, marginRight: 15 }}
-                      color="secondary"
                       aria-label="Close Button"
                     >
-                      <IoClose color="#fff" size={ICON_SIZE} />
+                      <IoClose color={theme.palette.text.primary} size={ICON_SIZE} />
                     </IconButton>
                   </div>
 
@@ -78,7 +77,7 @@ const Navbar: React.FC = () => {
                     >
                       <ListItemButton aria-label="GitHub Button">
                         <ListItemIcon>
-                          <FaGithub color="#fff" size={ICON_SIZE} />
+                          <FaGithub color={theme.palette.text.primary} size={ICON_SIZE} />
                         </ListItemIcon>
                         <ListItemText primary="GitHub" />
                       </ListItemButton>
@@ -91,7 +90,7 @@ const Navbar: React.FC = () => {
                     >
                       <ListItemButton aria-label="LinkedIn Button">
                         <ListItemIcon>
-                          <FaLinkedin color="#fff" size={ICON_SIZE} />
+                          <FaLinkedin color={theme.palette.text.primary} size={ICON_SIZE} />
                         </ListItemIcon>
                         <ListItemText primary="LinkedIn" />
                       </ListItemButton>
@@ -104,7 +103,7 @@ const Navbar: React.FC = () => {
                     >
                       <ListItemButton aria-label="Email Button">
                         <ListItemIcon>
-                          <MdMailOutline color="#fff" size={ICON_SIZE} />
+                          <MdMailOutline color={theme.palette.text.primary} size={ICON_SIZE} />
                         </ListItemIcon>
                         <ListItemText primary="Email" />
                       </ListItemButton>
@@ -120,8 +119,8 @@ const Navbar: React.FC = () => {
                         rel="noopener noreferrer"
                         href={links.github}
                     >
-                        <IconButton color="secondary" aria-label="GitHub Button">
-                            <FaGithub size={ICON_SIZE} />
+                        <IconButton aria-label="GitHub Button">
+                            <FaGithub size={ICON_SIZE} color={theme.palette.text.primary}  />
                         </IconButton>
                     </Link>
                     <Link
@@ -129,8 +128,8 @@ const Navbar: React.FC = () => {
                         rel="noopener noreferrer"
                         href={links.linkedin}
                     >
-                        <IconButton color="secondary" aria-label="LinkedIn Button">
-                            <FaLinkedin size={ICON_SIZE} />
+                        <IconButton aria-label="LinkedIn Button">
+                            <FaLinkedin size={ICON_SIZE} color={theme.palette.text.primary} />
                         </IconButton>
                     </Link>
                     <Link
@@ -138,8 +137,8 @@ const Navbar: React.FC = () => {
                         rel="noopener noreferrer"
                         href={links.email}
                     >
-                        <IconButton color="secondary" aria-label="Email Button">
-                            <MdMailOutline size={ICON_SIZE} />
+                        <IconButton aria-label="Email Button">
+                            <MdMailOutline size={ICON_SIZE} color={theme.palette.text.primary} />
                         </IconButton>
                     </Link>
             </Box>

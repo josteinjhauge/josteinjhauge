@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import { Box, Typography, styled } from '@mui/material';
+import { Box, Typography, styled, useTheme } from '@mui/material';
 
 const Wrapper = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.background.default,
@@ -35,11 +35,12 @@ const ProfilePic = styled(Image)(({ theme }) => ({
 }));
 
 const Intro = () => {
+    const theme = useTheme();
     return (
        <Wrapper>
         <TextWrapper>
             <Box m="2rem" />
-            <Typography variant="h2" color="initial">
+            <Typography variant="h2" color={theme.palette.text.secondary}>
                 Hi, I'm Jostein Hauge.
             </Typography>
             <Typography variant="h4" color="initial">
