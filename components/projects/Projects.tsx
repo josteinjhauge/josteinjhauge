@@ -1,5 +1,5 @@
 "use client";
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Divider, Grid, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import React from 'react';
 import ProjectCard from './ProjectCard';
@@ -14,6 +14,7 @@ export const Projects: React.FC = () => {
       justifyContent="center"
       paddingTop="2rem"
     >
+
       <Typography
         color="textPrimary"
         align="center"

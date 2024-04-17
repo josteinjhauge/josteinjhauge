@@ -9,16 +9,16 @@ interface Props {
 }
 
 const Page: FC<Props> = ({ params: { slug } }) => {
-  const activeProject = useMemo(
+  const project = useMemo(
     () => projects.find((project) => project.path === slug),
     [slug]
   );
 
-  if (!activeProject) {
+  if (!project) {
     notFound();
   }
 
-  return <Details project={activeProject} />;
+  return <Details project={project} />;
 };
 
 export default Page;
