@@ -18,7 +18,14 @@ const Navbar: React.FC = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
     
     return (
-        <AppBar>
+        <AppBar
+        color="primary"
+      position="sticky"
+      style={{
+        color: theme.palette.primary.main,
+        boxShadow: "none",
+        padding: "1rem 0",
+      }}>
            <Toolbar>
             <Container 
             style={{

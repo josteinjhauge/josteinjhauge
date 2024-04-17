@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Typography, Paper, useTheme, Box } from '@mui/material';
+import { Typography, Paper, useTheme, Box, Container, Grid, Link } from '@mui/material';
 import { Project } from '@/lib/projects';
 import Image from 'next/image';
 
@@ -9,30 +9,89 @@ interface ProjectDetailsProps {
     project: Project
 }
 
+
+
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({project}) => {
     const theme = useTheme();
+
+    const header = () => {
+        return (
+            <>
+            <Container sx={{alignItems: "center"}}>
+                        <Box display="flex">
+                            <Image width={100}
+                                height={100}
+                                src={project.imgUrl}
+                                alt={project.name}
+                                style={{
+                                    borderRadius: "50%",
+                                    border: "2px solid white",
+                                    borderColor: theme.palette.text.primary,
+                                    boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
+                                }}
+                            />
+                            <Box sx={{alignContent: "center"}}>
+                                <Typography variant="h4" color="textPrimary" sx={{ml: 2}}>
+                                    {project.name}
+                                </Typography>
+                                <Typography variant="subtitle1" color="textSecondary" sx={{ml: 2}}>
+                                    {project.date}
+                                </Typography>
+                            </Box>
+                        </Box>
+            </Container>
+            </>
+        )
+    }
+    const renderLinks = () => {if (project.links) {
+        return (
+          <>
+            <Box m="1rem" />
+  
+            <Typography color="textPrimary" variant="h5" fontWeight="bold">
+              Links:
+            </Typography>
+  
+            {project.links.map((link) => (
+              <div key={link.name}>
+                <Box m="1rem" />
+                <Typography color="textPrimary" variant="body1" fontWeight="bold">
+                  {link.name}:{" "}
+                  <Link
+                    style={{ wordWrap: "break-word", fontWeight: "normal" }}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    color="textSecondary"
+                    href={link.link}
+                  >
+                    {link.link}
+                  </Link>
+                </Typography>
+              </div>
+            ))}
+          </>
+        );
+      }
+    }
+    
     return (
-        <Box sx={{padding: "5rem"}}>
-            <Box sx={{display: "flex", flexDirection: "row"}}>
-            <Typography variant="h4" color="textPrimary">
-                {project.name}
+        <Box sx={{padding: "3rem"}}>
+            {header()}
+            
+            <Box m="1rem" />
+            <Container maxWidth="md">
+        {project.description.map((paragraph: string) => (
+          <div key={paragraph}>
+            <Typography color="textPrimary" variant="body1">
+              {paragraph}
             </Typography>
-            <Box m="0.5rem" />
-            <Image
-                width={50}
-                height={50}
-                src={project.imgUrl}
-                alt={project.name}
-                style={{
-                    borderRadius: "50%",
-                    boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
-                }}
-            />
-            </Box>
-            <Typography variant="subtitle1" color="textSecondary">
-                {project.date}
-            </Typography>
-            <Box m="0.5rem" />
+            <Box m="1rem" />
+          </div>
+        ))}
+        {renderLinks()}
+        {/* {renderTechnologiesUsed()}
+        {renderAppBadges()}  */}
+      </Container>
         </Box>
     );
 };
