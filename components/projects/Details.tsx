@@ -1,12 +1,13 @@
 import React from 'react';
 import { Typography, Paper } from '@mui/material';
+import { Project } from '@/lib/projects';
 
 
 interface ProjectDetailsProps {
-    // Define the props for your project details here
+    project: Project
 }
 
-const ProjectDetails: React.FC<ProjectDetailsProps> = (props) => {
+const ProjectDetails: React.FC<ProjectDetailsProps> = ({project}) => {
 
     return (
         <Paper>
