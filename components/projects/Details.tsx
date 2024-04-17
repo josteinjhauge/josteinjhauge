@@ -1,5 +1,6 @@
+"use client";
 import React from 'react';
-import { Typography, Paper } from '@mui/material';
+import { Typography, Paper, useTheme, Box } from '@mui/material';
 import { Project } from '@/lib/projects';
 
 
@@ -8,14 +9,18 @@ interface ProjectDetailsProps {
 }
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({project}) => {
-
+    const theme = useTheme();
     return (
-        <Paper>
-            <Typography variant="h4" gutterBottom>
-                Project Details
+        <Box>
+            <Typography variant="h4" color="textPrimary">
+                {project.name}
             </Typography>
-            {/* Add your project details content here */}
-        </Paper>
+            <Box m="0.5rem" />
+            <Typography variant="subtitle1" color="textSecondary">
+                {project.date}
+            </Typography>
+            <Box m="0.5rem" />
+        </Box>
     );
 };
 

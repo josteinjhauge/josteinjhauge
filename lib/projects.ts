@@ -31,7 +31,7 @@ export interface Project {
         name: "Bokmålsordboka",
         subtitle: "iOS and Android app for the largest Norwegian dictionary.",
         description: [
-          "Den store bokmålsordboka is the largest Norwegian dictionary, with over 200 000 words. At Ovitas AS I took part in developing the mobile app, managing the external testing and making the landing page. Later, development of the project was taken over by Davoti Solutions, my own company.",
+          "Den store bokmålsordboka is the largest Norwegian dictionary, with over 200 000 words. At Ovitas AS I took part in developing the mobile app, managing the external testing and making the landing page.",
         ],
         imgUrl: "/img/projectIcons/bokmalsordboka.jpg",
         appStoreUrl: "https://apps.apple.com/us/app/id1497725111",
@@ -76,7 +76,7 @@ export interface Project {
         name: "HunNor Dictionary",
         subtitle: "Mobile app for a Norwegian-Hungarian dictionary.",
         description: [
-          "The HunNor Dictionary is an open-source Norwegian-Hungarian dictionary. At Ovitas AS, I took part in developing the mobile app. Later, development of the project was taken over by Davoti Solutions, my own company.",
+          "The HunNor Dictionary is an open-source Norwegian-Hungarian dictionary. At Ovitas AS, I took part in developing the mobile app.",
         ],
         imgUrl: "/img/projectIcons/hunnor.jpg",
         appStoreUrl: null,
