@@ -18,7 +18,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ path, name, subtitle, date, i
                 style={{
                     width: 250,
                     height: "auto",
-                    backgroundColor: theme.palette.secondary.main, // Removed quotes around theme.palette.primary.main
+                    zIndex: 1,
+                    backgroundColor: theme.palette.mode === 'dark' ? 'rgba(0,0,0,0.6)' : 'rgba(255,255,255,0.4)',
+                    backdropFilter: 'blur(40px)',
+                    // backgroundColor: theme.palette.secondary.main, // Removed quotes around theme.palette.primary.main
                     boxShadow: "0",
                     margin: "1rem",
                     cursor: "pointer",
