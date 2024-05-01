@@ -9,11 +9,7 @@ export const metadata: Metadata = {
   description: "Fullstack developer from Oslo, Norway",
 };
 
-const RootLayout = ({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) => {
+const RootLayout = ({children}: {children: React.ReactNode}) => {
   return (
     <html lang="en">
      <body>
