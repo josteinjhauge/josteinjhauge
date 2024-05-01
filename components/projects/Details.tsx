@@ -12,6 +12,7 @@ interface ProjectDetailsProps {
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({project}) => {
     const theme = useTheme();
+    const router = useRouter();
 
     const header = () => {
         return (
@@ -75,7 +76,6 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({project}) => {
     }
 
     const renderTech = () => {
-      const router = useRouter();
       if (project.technologies) {
         return (
           <>

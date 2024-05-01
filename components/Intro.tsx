@@ -36,15 +36,17 @@ const ProfilePic = styled(Image)(({ theme }) => ({
 
 const Intro = () => {
     const theme = useTheme();
+    const introtext1 = "Hi, I'm Jostein Hauge."
+    const introtext2 = "I'm a software developer based in Oslo, Norway."
     return (
        <Wrapper>
         <TextWrapper>
             <Box m="2rem" />
             <Typography variant="h2" color={theme.palette.text.secondary}>
-                Hi, I'm Jostein Hauge.
+                {introtext1}
             </Typography>
             <Typography variant="h4" color="initial">
-                I'm a software developer based in Norway.
+                {introtext2}
             </Typography>
         </TextWrapper>
         <ProfilePic
