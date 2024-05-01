@@ -1,15 +1,14 @@
 "use client";
 import React from 'react';
-import { Typography, Paper, useTheme, Box, Container, Grid, Link } from '@mui/material';
+import { Typography, Paper, useTheme, Box, Container, Link, Chip } from '@mui/material';
 import { Project } from '@/lib/projects';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 
 interface ProjectDetailsProps {
     project: Project
 }
-
-
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({project}) => {
     const theme = useTheme();
@@ -43,6 +42,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({project}) => {
             </>
         )
     }
+
     const renderLinks = () => {if (project.links) {
         return (
           <>
@@ -73,6 +73,26 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({project}) => {
         );
       }
     }
+
+    const renderTech = () => {
+      const router = useRouter();
+      if (project.technologies) {
+        return (
+          <>
+            <Box m="1rem" />
+            <Typography color="textPrimary" variant="h5" fontWeight="bold">
+              Technologies Used:
+            </Typography>
+            <Box m="1rem" />
+              {project.technologies.map((tech, i) => (
+                <Box flexDirection="row" padding={0.5} key={i}>
+                  <Chip label={tech.name} onClick={() => router.push(`${tech.link}`)} />
+                </Box>
+              ))}
+          </>
+        );
+      }
+    };
     
     return (
         <Box sx={{padding: "3rem"}}>
@@ -81,16 +101,16 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({project}) => {
             <Box m="1rem" />
             <Container maxWidth="md">
         {project.description.map((paragraph: string) => (
-          <div key={paragraph}>
+          <Box key={paragraph}>
             <Typography color="textPrimary" variant="body1">
               {paragraph}
             </Typography>
             <Box m="1rem" />
-          </div>
+          </Box>
         ))}
         {renderLinks()}
-        {/* {renderTechnologiesUsed()}
-        {renderAppBadges()}  */}
+        {renderTech()}
+        {/* {renderAppBadges()} */}
       </Container>
         </Box>
     );
