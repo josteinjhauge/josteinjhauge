@@ -1,14 +1,11 @@
 "use client";
-import React from 'react';
-import { Box, styled, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Container, Grid, Typography } from '@mui/material';
+import paintings from '@/lib/paintings';
+import { AnimatePresence, motion } from 'framer-motion';
+import PaintingCard from './PaintingCard';
+import Display from './Display';
 
-const SlideItem = styled(Box) ({
-    height: '300px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f5f5f5',
-});
 
 const SideProjects: React.FC = () => {
     return (
@@ -29,6 +26,7 @@ const SideProjects: React.FC = () => {
           Side Projects / Hobbies
         </Typography>
         <Box m="0.5rem" />
+            <Display />
         </Box>
     );
 };

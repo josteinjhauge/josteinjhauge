@@ -8,7 +8,7 @@ export default function Home() {
    <Container>
     <Intro />
     <Projects />
-    <SideProjects />
+    {/* <SideProjects /> */}
    </Container>
   );
 }
