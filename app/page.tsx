@@ -2,13 +2,11 @@ import { Container } from "@mui/material";
 import Intro from "@/components/Intro";
 import { Projects } from "@/components/projects/Projects";
 
-const Page = () => {
-  return (
-   <Container>
+const Page = () => (
+  <Container>
     <Intro />
     <Projects />
-   </Container>
-  );
-}
+  </Container>
+);
 
 export default Page;
