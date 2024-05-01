@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Card, CardContent, CardMedia, Typography, useTheme } from '@mui/material';
 import { motion } from "framer-motion";
-import { Painting } from '@/lib/paintings';
+import { Painting } from '../../lib/paintings';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 

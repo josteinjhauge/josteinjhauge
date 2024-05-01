@@ -1,8 +1,8 @@
 
-import Details from "@/components/projects/Details";
-import projects from "@/lib/projects";
 import { notFound } from "next/navigation";
 import { FC, useMemo } from "react";
+import Details from "../../../components/projects/Details";
+import projects from "../../../lib/projects";
 
 interface Props {
   params: { slug: string };

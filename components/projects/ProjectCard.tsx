@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
-import { Box, Card, CardContent, CardMedia, Typography, useTheme } from '@mui/material';
+import { Box, Card, Typography, useTheme } from '@mui/material';
 import { motion } from "framer-motion";
-import { Project } from '@/lib/projects';
+import { Project } from '../../lib/projects';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 

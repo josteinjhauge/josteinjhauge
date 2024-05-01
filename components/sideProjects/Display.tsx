@@ -1,9 +1,9 @@
 "use client";
-import { Painting } from '@/lib/paintings';
+import { Painting } from '../../lib/paintings';
 import { Container, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
-import paintings from '@/lib/paintings';
+import paintings from '../../lib/paintings';
 import FrontCard from './FrontCard';
 import BackCard from './BackCard';
 

@@ -3,7 +3,7 @@ import { Box, Container, Divider, Grid, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import React from 'react';
 import ProjectCard from './ProjectCard';
-import projects from '@/lib/projects';
+import projects from '../../lib/projects';
 
 export const Projects: React.FC = () => {
     return (

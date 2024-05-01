@@ -1,12 +1,12 @@
 "use client";
-import { links } from '@/lib/links';
+import { links } from '../lib/links';
 import { AppBar, Box, Container, IconButton, Link, List, ListItemButton, ListItemIcon, ListItemText, SwipeableDrawer, Toolbar, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
 
 import NextLink from 'next/link';
 import { MdClose, MdMailOutline } from 'react-icons/md';
 import { FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa6';
-import { ICON_SIZE } from '@/lib/theme';
+import { ICON_SIZE } from '../lib/theme';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import { TfiMenu } from 'react-icons/tfi';
 import { IoClose } from 'react-icons/io5';

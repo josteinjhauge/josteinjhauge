@@ -1,9 +1,6 @@
 "use client";
-import React, { useState } from 'react';
-import { Box, Container, Grid, Typography } from '@mui/material';
-import paintings from '@/lib/paintings';
-import { AnimatePresence, motion } from 'framer-motion';
-import PaintingCard from './PaintingCard';
+import React from 'react';
+import { Box, Typography } from '@mui/material';
 import Display from './Display';
 
 
