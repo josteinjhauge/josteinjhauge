@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
-import { Typography, Paper, useTheme, Box, Container, Link, Chip } from '@mui/material';
-import { Project } from '../../lib/projects';
+import { Typography, useTheme, Box, Container, Link, Chip } from '@mui/material';
+import { Project } from '../lib/projects';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
@@ -110,7 +110,6 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({project}) => {
         ))}
         {renderLinks()}
         {renderTech()}
-        {/* {renderAppBadges()} */}
       </Container>
         </Box>
     );

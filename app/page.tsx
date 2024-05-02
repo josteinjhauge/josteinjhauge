@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 import Intro from "../components/Intro";
-import { Projects } from "../components/projects/Projects";
+import { Projects } from "../components/Projects";
 
 const Page = () => (
   <Container>

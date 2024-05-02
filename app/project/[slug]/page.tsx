@@ -1,7 +1,7 @@
 
 import { notFound } from "next/navigation";
 import { FC, useMemo } from "react";
-import Details from "../../../components/projects/Details";
+import Details from "../../../components/Details";
 import projects from "../../../lib/projects";
 
 interface Props {
