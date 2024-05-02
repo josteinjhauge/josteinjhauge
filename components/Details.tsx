@@ -86,7 +86,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({project}) => {
             <Box m="1rem" />
               {project.technologies.map((tech, i) => (
                 <Box flexDirection="row" padding={0.5} key={i}>
-                  <Chip label={tech.name} onClick={() => router.push(`${tech.link}`)} />
+                  <Chip label={tech.name} onClick={() => router.push(`${tech.link}`)} variant='outlined' />
                 </Box>
               ))}
           </>
