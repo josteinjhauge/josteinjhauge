@@ -5,7 +5,7 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 import projects from '../lib/projects';
 
-export const Projects: React.FC = () => {
+const Projects: React.FC = () => {
     return (
         <Box
       display="flex"
@@ -50,3 +50,5 @@ export const Projects: React.FC = () => {
       </Box>
     );
 };
+
+export default Projects;

@@ -5,12 +5,11 @@ import { Project } from '../lib/projects';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-
-interface ProjectDetailsProps {
+interface DetailsProps {
     project: Project
 }
 
-const ProjectDetails: React.FC<ProjectDetailsProps> = ({project}) => {
+const Details: React.FC<DetailsProps> = ({project}) => {
     const theme = useTheme();
     const router = useRouter();
 
@@ -115,4 +114,4 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({project}) => {
     );
 };
 
-export default ProjectDetails;
+export default Details;
