@@ -13,13 +13,31 @@ const palette: PaletteOptions = {
   },
   text: {
     primary: "#fff",
-    secondary: "#66fcf1",
+    secondary: "#ff0081",
   },
   background: {
     default: "#1f2833",
     paper: "#1f2833",
   },
 };
+
+// const palette: PaletteOptions = {
+//   primary: {
+//     main: "#000000",
+//   },
+//   secondary: {
+//     main: "	#008080",
+//   },
+//   text: {
+//     primary: "#fdffff",
+//     secondary: "#ff0081",
+//     disabled: "#008080",
+//   },
+//   background: {
+//     default: "#818181",
+//     paper: "#c3c3c3",
+//   },
+// };
 
 export const theme = createTheme({
   palette,
