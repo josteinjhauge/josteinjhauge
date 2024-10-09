@@ -2,7 +2,7 @@
 
 Im a fullstack developer
 <br />
-Website: coming soon!
+Website: http://josteinhauge.no/
 <br />
 💼 LinkedIn: [linkedin.com/in/josteinhauge](https://www.linkedin.com/in/jostein-hauge-3472aa1a9/)
 <br />
