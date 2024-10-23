@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
             maxHeight: "10vh",
           }}>
                 <NextLink href="/" >
-                <Typography variant="h5" color="initial">
+                <Typography variant="h5" color={theme.palette.text.primary}>
                     Jostein Hauge
                 </Typography>
                 </NextLink>

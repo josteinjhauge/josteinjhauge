@@ -45,7 +45,7 @@ const Intro = () => {
             <Typography variant="h2" color={theme.palette.text.secondary}>
                 {introtext1}
             </Typography>
-            <Typography variant="h4" color="initial">
+            <Typography variant="h4" color={theme.palette.text.primary}>
                 {introtext2}
             </Typography>
         </TextWrapper>
