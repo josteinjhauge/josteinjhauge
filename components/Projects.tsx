@@ -1,13 +1,18 @@
 "use client";
 import { Box, Container, Divider, Grid, Typography } from '@mui/material';
-import { motion } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 import React from 'react';
 import ProjectCard from './ProjectCard';
 import projects from '../lib/projects';
+import { Section } from './Section';
+import { useRef } from 'react';
 
 const Projects: React.FC = () => {
+  const ref = useRef(null)
+  const { scrollYProgress } = useScroll({ target: ref });
     return (
-        <Box
+      <Section ref={ref}>
+         <Box
       display="flex"
       flexDirection="column"
       alignItems="center"
@@ -48,6 +53,7 @@ const Projects: React.FC = () => {
         </Grid>
       </Container>
       </Box>
+      </Section>
     );
 };
 

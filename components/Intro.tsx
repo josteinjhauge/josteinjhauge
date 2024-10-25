@@ -2,6 +2,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { Box, Typography, styled, useTheme } from '@mui/material';
+import { Section } from './Section';
+import { useRef } from 'react';
+import { useScroll } from 'framer-motion';
 
 const Wrapper = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.background.default,
@@ -36,12 +39,15 @@ const ProfilePic = styled(Image)(({ theme }) => ({
 
 const Intro = () => {
     const theme = useTheme();
+    const ref = useRef(null)
+    const { scrollYProgress } = useScroll({ target: ref });
     const introtext1 = "Hi, I'm Jostein Hauge."
     const introtext2 = "I'm a software developer based in Oslo, Norway."
     return (
-       <Wrapper>
+       <Section ref={ref}>
+        <Wrapper >
         <TextWrapper>
-            <Box m="2rem" />
+            {/* <Box m="2rem" /> */}
             <Typography variant="h2" color={theme.palette.text.secondary}>
                 {introtext1}
             </Typography>
@@ -54,7 +60,8 @@ const Intro = () => {
             alt="Profile Image"
             width={200}
             height={220} />
-       </Wrapper>
+        </Wrapper>
+       </Section>
     );
 };
 
